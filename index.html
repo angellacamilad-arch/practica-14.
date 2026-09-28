@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2eee5" />
+    <title>Gato | Tres en línea</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <p class="eyebrow">PARTIDA LOCAL · DOS JUGADORES</p>
+        <h1>Gato<span>.</span></h1>
+        <p class="subtitle">Tres en línea. Una buena revancha.</p>
+      </header>
+
+      <section class="game-panel" aria-labelledby="game-title">
+        <div class="panel-heading">
+          <h2 id="game-title">La partida</h2>
+          <p id="game-status" class="game-status" aria-live="polite">Turno de <span class="player-x">X</span></p>
+        </div>
+
+        <section class="scoreboard" aria-label="Marcador de partidas">
+          <div class="score-heading">
+            <h3>Marcador</h3>
+            <button id="reset-score-button" class="score-reset" type="button">Reiniciar puntos</button>
+          </div>
+          <div class="score-players">
+            <div class="score-item score-x">
+              <span>Jugador X</span>
+              <strong id="score-x" aria-live="polite">0</strong>
+            </div>
+            <div class="score-item score-o">
+              <span>Jugador O</span>
+              <strong id="score-o" aria-live="polite">0</strong>
+            </div>
+          </div>
+        </section>
+
+        <div class="board" role="grid" aria-label="Tablero de gato">
+          <button class="cell" type="button" role="gridcell" data-index="0" aria-label="Casilla 1, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="1" aria-label="Casilla 2, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="2" aria-label="Casilla 3, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="3" aria-label="Casilla 4, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="4" aria-label="Casilla 5, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="5" aria-label="Casilla 6, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="6" aria-label="Casilla 7, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="7" aria-label="Casilla 8, vacía"></button>
+          <button class="cell" type="button" role="gridcell" data-index="8" aria-label="Casilla 9, vacía"></button>
+        </div>
+
+        <div class="game-footer">
+          <span class="turn-indicator"><span class="turn-dot" aria-hidden="true"></span><span id="starting-player">Inicia X</span></span>
+          <button id="reset-button" class="reset-button" type="button">
+            <span aria-hidden="true">↻</span> Nueva partida
+          </button>
+        </div>
+      </section>
+
+      <footer class="page-footer">PIENSA DOS JUGADAS ADELANTE</footer>
+    </main>
+  </body>
+</html>
